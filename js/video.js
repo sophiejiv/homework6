@@ -45,15 +45,16 @@ document.querySelector("#mute").addEventListener("click", function() {
 	}
 	else{
 		video.muted = true 
-			let sound = document.getElementById("mute").innerHTML = "Unmuted";
-			console.log("Video Unmuted")
+			let sound = document.getElementById("mute").innerHTML = "Unmute";
+			console.log("Video Unmute")
 	}
 
 });
 
 document.querySelector("#volumeSlider").addEventListener("change", function() {
-	let slider = document.getElementById("volume").innerHTML = volumeSlider.value + "%"
-	console.log (volumeSlider.value)
+	video.volume = volumeSlider.value/100;
+	let slider = document.getElementById("volume").innerHTML = volumeSlider.value + "%";
+	console.log (volumeSlider.value);
 });
 
 document.querySelector("#old").addEventListener("click", function() {
