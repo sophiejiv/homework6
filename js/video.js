@@ -70,12 +70,14 @@ function setVolume(){
 }
 
 document.querySelector("#old").addEventListener("click", function() {
-	document.getElementById("myVideo").style.filter = "grayscale(100%)";
+	// var vid = document.getElementById("myVideo");
+	video.classList.add("oldTime");
 	console.log("Grayscale");
 });
 
 document.querySelector("#original").addEventListener("click", function() {
-	document.getElementById("myVideo").style.filter = "grayscale(0%)";
+	// var vid = document.getElementById("myVideo");
+	video.classList.remove("oldTime");
 	console.log("Original");
 });
 
